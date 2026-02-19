@@ -14,7 +14,7 @@ lmfit = ["lmfit"]
 dev = ["pytest", "lmfit"]
 
 [project.urls]
-Homepage = "https://github.com/yourusername/fit_aic"
+Homepage = "https://github.com/dagrass/fit_aic"
 
 [tool.setuptools.packages.find]
 where = ["."]
