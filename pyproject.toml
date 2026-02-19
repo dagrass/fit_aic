@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fit_aic"
+version = "0.1.0"
+description = "AIC and AICc wrappers for scipy and lmfit"
+requires-python = ">=3.8"
+dependencies = ["scipy", "numpy"]
+
+[project.optional-dependencies]
+lmfit = ["lmfit"]
+dev = ["pytest", "lmfit"]
+
+[project.urls]
+Homepage = "https://github.com/yourusername/fit_aic"
+
+[tool.setuptools.packages.find]
+where = ["."]
