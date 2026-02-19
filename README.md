@@ -31,7 +31,7 @@ $$f_3(x) = a_1 e^{-x/t_1} + a_2 e^{-x/t_2} + a_3 e^{-x/t_3}$$
 
 The lowest AIC value can be used to select the best model that fits the data. This is illustrated in the figure below. Model 1 is plotted in blue, model 2 in orange, and model 3 in green. It appears model 2 and model 3 are almost identical, but model 2 is better as it has the lower AIC value — which makes sense given that the fits look the same but model 3 has 2 more free parameters.
 
-![AIC comparison](model_comparison.png)
+![AIC comparison](other/model_comparison.png)
 
 AICc is a corrected version of AIC for small sample sizes. As $n \to \infty$, AICc converges to AIC. It is recommended to always use AICc unless $n/k > 40$, where $n$ is the number of data points and $k$ the number of parameters.
 
