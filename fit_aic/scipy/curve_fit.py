@@ -102,11 +102,30 @@ def curve_fit(
         Covariance matrix of parameters.
     infodict : dict (only if full_output=True)
         Dictionary with optimization info, including 'aic' and 'aicc' keys.
+        Note: aicc will be inf if n - k - 1 <= 0 (too many parameters for dataset size).
     mesg : str (only if full_output=True)
         Optimization message.
     ier : int (only if full_output=True)
         Integer flag indicating success.
+    
+    Raises
+    ------
+    ValueError
+        If data arrays are empty or have mismatched lengths.
     """
+    
+    # Input validation
+    xdata = np.asarray(xdata)
+    ydata = np.asarray(ydata)
+    
+    if xdata.size == 0 or ydata.size == 0:
+        raise ValueError("Data arrays cannot be empty")
+    
+    if xdata.shape[0] != ydata.shape[0]:
+        raise ValueError(
+            f"xdata and ydata must have the same length. "
+            f"Got xdata: {xdata.shape[0]}, ydata: {ydata.shape[0]}"
+        )
 
     if not full_output:
         return _curve_fit(
