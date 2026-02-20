@@ -1,4 +1,6 @@
 # fit_aic
+[![PyPI version](https://badge.fury.io/py/fit-aic.svg)](https://badge.fury.io/py/fit-aic)
+
 AIC and AICc wrappers for scipy and lmfit, making it easy to compute Akaike information criteria for model comparison.
 
 ## Overview
