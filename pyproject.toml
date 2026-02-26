@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "fit_aic"
-version = "0.1.1"
+version = "0.1.2"
 description = "AIC and AICc wrappers for scipy and lmfit"
 requires-python = ">=3.8"
 readme = {file = "README.md", content-type = "text/markdown"}
@@ -20,3 +20,4 @@ Repository = "https://github.com/dagrass/fit_aic"
 
 [tool.setuptools.packages.find]
 where = ["."]
+exclude = ["venv*"]
